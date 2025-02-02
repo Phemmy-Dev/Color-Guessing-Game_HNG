@@ -21,7 +21,7 @@
  // To Generate array of colors including target color
  function generateColors() {
      const colors = [];
-     // Generate target color
+     // To Generate target color
      const targetColor = generateRandomColor();
      colors.push(targetColor);
      
