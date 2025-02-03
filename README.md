@@ -39,7 +39,7 @@ The game is fully responsive and works on:
 - 📟 Tablets
 
 
-Project Link: [https://github.com/Phemmy-Dev/Color-Guessing-Game_HNG](https://color-guess-game-hng.netlify.app/)
+Project Live Link: (https://color-guess-game-hng.netlify.app/)
 
 ---
 
