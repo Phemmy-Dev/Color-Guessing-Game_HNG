@@ -1,16 +1,16 @@
- // Game state
+ // The Game state
  let score = 0;
  let targetColor = '';
  let colors = [];
 
- // DOM elements
+ // Our DOM elements
  const colorBox = document.querySelector('[data-testid="colorBox"]');
  const optionsContainer = document.querySelector('.options-container');
  const gameStatus = document.querySelector('[data-testid="gameStatus"]');
  const scoreElement = document.querySelector('[data-testid="score"]');
  const newGameButton = document.querySelector('[data-testid="newGameButton"]');
 
- // Generate random color
+ // To Generate the random color
  function generateRandomColor() {
      const r = Math.floor(Math.random() * 256);
      const g = Math.floor(Math.random() * 256);
@@ -18,7 +18,7 @@
      return `rgb(${r}, ${g}, ${b})`;
  }
 
- // Generate array of colors including target color
+ // To Generate array of colors including target color
  function generateColors() {
      const colors = [];
      // Generate target color
@@ -33,14 +33,14 @@
          }
      }
      
-     // Shuffle array
+     // Our Shuffle array
      return {
          targetColor,
          options: colors.sort(() => Math.random() - 0.5)
      };
  }
 
- // Handle color guess
+ // To Handle the color guess
  function handleGuess(color) {
      if (color === targetColor) {
          score++;
@@ -54,7 +54,7 @@
      }
  }
 
- // Create color options
+ // To Create color options
  function createColorOptions() {
      optionsContainer.innerHTML = '';
      colors.forEach(color => {
@@ -67,7 +67,7 @@
      });
  }
 
- // Start new game
+ // To Start new game
  function startNewGame() {
      const colorData = generateColors();
      targetColor = colorData.targetColor;
@@ -80,7 +80,7 @@
      createColorOptions();
  }
 
- // Event listeners
+ // Our Event listeners
  newGameButton.addEventListener('click', () => {
      score = 0;
      scoreElement.textContent = score;
